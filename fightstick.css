@@ -111,3 +111,84 @@ body {
 .fight-stick .trigger-button::after {
   content: none !important;
 }
+
+
+/* ==========================================
+   7. STRAIGHT BUTTON LAYOUT
+   CIRCEAN STUDIOS
+   ========================================== */
+
+/* All three groups share the same origin */
+.fight-stick .abxy,
+.fight-stick .bumpers,
+.fight-stick .triggers {
+  position: absolute !important;
+  left: 470px !important;
+  top: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 650px !important;
+  height: 534px !important;
+}
+
+/* Reset default positioning */
+.fight-stick .button,
+.fight-stick .bumper,
+.fight-stick .trigger-button {
+  position: absolute !important;
+  float: none !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+/* TOP ROW */
+
+/* Column 1 - X */
+.fight-stick .button.x {
+  left: 0 !important;
+  top: 110px !important;
+}
+
+/* Column 2 - Y */
+.fight-stick .button.y {
+  left: 160px !important;
+  top: 110px !important;
+}
+
+/* Column 3 - Right Bumper */
+.fight-stick .bumper.right {
+  left: 320px !important;
+  top: 110px !important;
+}
+
+/* Column 4 - Left Bumper */
+.fight-stick .bumper.left {
+  left: 480px !important;
+  top: 110px !important;
+}
+
+/* BOTTOM ROW */
+
+/* Column 1 - A */
+.fight-stick .button.a {
+  left: 0 !important;
+  top: 278px !important;
+}
+
+/* Column 2 - B */
+.fight-stick .button.b {
+  left: 160px !important;
+  top: 278px !important;
+}
+
+/* Column 3 - Right Trigger */
+.fight-stick .trigger-button.right {
+  left: 320px !important;
+  top: 278px !important;
+}
+
+/* Column 4 - Left Trigger */
+.fight-stick .trigger-button.left {
+  left: 480px !important;
+  top: 278px !important;
+}
