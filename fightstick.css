@@ -59,8 +59,8 @@ body {
 .fight-stick .button,
 .fight-stick .bumper,
 .fight-stick .trigger-button {
-  background: #779F5C !important;
-  border: 5px solid #CF2664 !important;
+  background: #252329 !important;
+  border: 4px solid #779F5C !important;
   border-radius: 50% !important;
   box-sizing: border-box;
   opacity: 1 !important;
