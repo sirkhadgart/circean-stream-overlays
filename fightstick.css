@@ -131,11 +131,6 @@ body {
   transform: scale(0.5) !important;
   transform-origin: center center;
 
-  /* Preserve original directional sprite */
-  filter: hue-rotate(65deg) saturate(1.2);
-}
-
-
 /* TEST - Recolor joystick sprite */
 
 .fight-stick .fstick {
