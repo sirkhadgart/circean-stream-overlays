@@ -134,3 +134,12 @@ body {
   /* Preserve original directional sprite */
   filter: hue-rotate(65deg) saturate(1.2);
 }
+
+
+/* TEST - Recolor joystick sprite */
+
+.fight-stick .fstick {
+  filter: grayscale(1) !important;
+  -webkit-filter: grayscale(1) !important;
+}
+
