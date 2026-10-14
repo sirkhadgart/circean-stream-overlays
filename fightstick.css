@@ -37,36 +37,40 @@ body {
   -webkit-filter: none !important;
 }
 
-/* Cardinal directions */
-.fight-stick .fstick.up {
-  transform: translateY(-15px);
+
+/* CIRCEAN STUDIOS - FIGHTSTICK */
+
+body {
+  background: transparent !important;
 }
 
-.fight-stick .fstick.down {
-  transform: translateY(15px);
+.controller {
+  background: none !important;
+  opacity: 1 !important;
 }
 
-.fight-stick .fstick.left {
-  transform: translateX(-15px);
+/* Joystick size */
+.fight-stick .fstick {
+  transform: scale(0.5) !important;
+  transform-origin: center center;
 }
 
-.fight-stick .fstick.right {
-  transform: translateX(15px);
+/* Action buttons */
+.fight-stick .button,
+.fight-stick .bumper,
+.fight-stick .trigger-button {
+  background: #779F5C !important;
+  border: 5px solid #CF2664 !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
 }
 
-/* Diagonal directions */
-.fight-stick .fstick.up.left {
-  transform: translate(-11px, -11px);
-}
-
-.fight-stick .fstick.up.right {
-  transform: translate(11px, -11px);
-}
-
-.fight-stick .fstick.down.left {
-  transform: translate(-11px, 11px);
-}
-
-.fight-stick .fstick.down.right {
-  transform: translate(11px, 11px);
+/* Pressed buttons */
+.fight-stick .button.pressed,
+.fight-stick .bumper.pressed,
+.fight-stick .trigger-button.pressed {
+  background: #CF2664 !important;
+  border-color: #6E5393 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
