@@ -109,9 +109,3 @@ body {
 /* ==========================================
    CIRCEAN STUDIOS - JOYSTICK RECOLOR
    ========================================== */
-
-.fight-stick .fstick {
-
-  filter: grayscale(1) !important;
-  -webkit-filter: grayscale(1) !important;
-}
