@@ -1,0 +1,11 @@
+
+/* Circean Studios - Fightstick Skin */
+
+body {
+  background: transparent !important;
+}
+
+/* Temporary test: hide all controller elements */
+.controller {
+  opacity: 0.3 !important;
+}
