@@ -1,8 +1,26 @@
 
-/* CIRCEAN STUDIOS - COLOR TEST */
+/* ==========================================
+   CIRCEAN STUDIOS
+   CUSTOM FIGHTSTICK OVERLAY
+   ========================================== */
 
+/* Brand Colors
+   Purple: #6E5393
+   Pink:   #CF2664
+   Green:  #779F5C
+*/
+
+
+/* ==========================================
+   1. TRANSPARENT BACKGROUND
+   ========================================== */
+
+html,
 body {
   background: transparent !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .controller {
@@ -10,67 +28,96 @@ body {
   opacity: 1 !important;
 }
 
-/* CIRCEAN STUDIOS - JOYSTICK SIZE */
+
+/* ==========================================
+   2. HIDE UNNECESSARY ELEMENTS
+   ========================================== */
+
+/* Hide player number */
+.fight-stick .player {
+  display: none !important;
+}
+
+/* Hide Start and Select buttons */
+.fight-stick .back,
+.fight-stick .start {
+  display: none !important;
+}
+
+/* Hide extra controller labels */
+.fight-stick .arrows,
+.fight-stick .quadrant {
+  display: none !important;
+}
+
+
+/* ==========================================
+   3. JOYSTICK
+   ========================================== */
+
+/*
+   Preserve GPV's original joystick sprite
+   and directional animation.
+
+   Only reduce its displayed size.
+*/
 
 .fight-stick .fstick {
   transform: scale(0.5) !important;
   transform-origin: center center;
 }
 
-/* Action buttons */
+
+/* ==========================================
+   4. ACTION BUTTONS
+   ========================================== */
+
+/* Default appearance */
 .fight-stick .button,
 .fight-stick .bumper,
 .fight-stick .trigger-button {
   background: #779F5C !important;
   border: 5px solid #CF2664 !important;
   border-radius: 50% !important;
+  box-sizing: border-box;
   opacity: 1 !important;
 }
 
-/* Pressed buttons */
+
+/* ==========================================
+   5. PRESSED BUTTON EFFECT
+   ========================================== */
+
 .fight-stick .button.pressed,
 .fight-stick .bumper.pressed,
 .fight-stick .trigger-button.pressed {
   background: #CF2664 !important;
   border-color: #6E5393 !important;
+
+  box-shadow: 0 0 12px
+    rgba(207, 38, 100, 0.65) !important;
+
   filter: none !important;
   -webkit-filter: none !important;
 }
 
 
-/* CIRCEAN STUDIOS - FIGHTSTICK */
+/* ==========================================
+   6. HIDE BUTTON LABELS
+   ========================================== */
 
-body {
-  background: transparent !important;
-}
-
-.controller {
-  background: none !important;
-  opacity: 1 !important;
-}
-
-/* Joystick size */
-.fight-stick .fstick {
-  transform: scale(0.5) !important;
-  transform-origin: center center;
-}
-
-/* Action buttons */
 .fight-stick .button,
 .fight-stick .bumper,
 .fight-stick .trigger-button {
-  background: #779F5C !important;
-  border: 5px solid #CF2664 !important;
-  border-radius: 50% !important;
-  opacity: 1 !important;
+  font-size: 0 !important;
+  color: transparent !important;
 }
 
-/* Pressed buttons */
-.fight-stick .button.pressed,
-.fight-stick .bumper.pressed,
-.fight-stick .trigger-button.pressed {
-  background: #CF2664 !important;
-  border-color: #6E5393 !important;
-  filter: none !important;
-  -webkit-filter: none !important;
+.fight-stick .button::before,
+.fight-stick .button::after,
+.fight-stick .bumper::before,
+.fight-stick .bumper::after,
+.fight-stick .trigger-button::before,
+.fight-stick .trigger-button::after {
+  content: none !important;
 }
