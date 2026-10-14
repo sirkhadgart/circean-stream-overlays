@@ -10,14 +10,7 @@ body {
   opacity: 1 !important;
 }
 
-/* Test the joystick */
-.fight-stick .fstick {
-  background: #CF2664 !important;
-  border: 8px solid #6E5393 !important;
-  border-radius: 50% !important;
-}
-
-/* Test all eight action buttons */
+/* Action buttons */
 .fight-stick .button,
 .fight-stick .bumper,
 .fight-stick .trigger-button {
@@ -25,4 +18,21 @@ body {
   border: 5px solid #CF2664 !important;
   border-radius: 50% !important;
   opacity: 1 !important;
+}
+
+/* Pressed buttons */
+.fight-stick .button.pressed,
+.fight-stick .bumper.pressed,
+.fight-stick .trigger-button.pressed {
+  background: #CF2664 !important;
+  border-color: #6E5393 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* Joystick */
+.fight-stick .fstick {
+  background: #CF2664 !important;
+  border: 5px solid #6E5393 !important;
+  border-radius: 50% !important;
 }
