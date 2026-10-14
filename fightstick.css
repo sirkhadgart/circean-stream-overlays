@@ -1,4 +1,3 @@
-
 /* ==========================================
    CIRCEAN STUDIOS
    CUSTOM FIGHTSTICK OVERLAY
@@ -33,18 +32,15 @@ body {
    2. HIDE UNNECESSARY ELEMENTS
    ========================================== */
 
-/* Hide player number */
 .fight-stick .player {
   display: none !important;
 }
 
-/* Hide Start and Select buttons */
 .fight-stick .back,
 .fight-stick .start {
   display: none !important;
 }
 
-/* Hide extra controller labels */
 .fight-stick .arrows,
 .fight-stick .quadrant {
   display: none !important;
@@ -52,10 +48,43 @@ body {
 
 
 /* ==========================================
+   3. JOYSTICK BASE
+   ========================================== */
+
+.fight-stick {
+  position: relative !important;
+}
+
+/* Stationary circular base behind the moving stick */
+.fight-stick::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #26222D;
+  border: 3px solid #6E5393;
+  left: 245px;
+  top: 405px;
+  z-index: 0;
+  opacity: 0.95;
+}
+
+/* Moving joystick knob */
+.fight-stick .fstick {
+  position: relative;
+  z-index: 1;
+  transform: scale(0.5) !important;
+  transform-origin: center center;
+  filter: grayscale(1) !important;
+  -webkit-filter: grayscale(1) !important;
+}
+
+
+/* ==========================================
    4. ACTION BUTTONS
    ========================================== */
 
-/* Default appearance */
 .fight-stick .button,
 .fight-stick .bumper,
 .fight-stick .trigger-button {
@@ -76,10 +105,7 @@ body {
 .fight-stick .trigger-button.pressed {
   background: #CF2664 !important;
   border-color: #6E5393 !important;
-
-  box-shadow: 0 0 12px
-    rgba(207, 38, 100, 0.65) !important;
-
+  box-shadow: 0 0 12px rgba(207, 38, 100, 0.65) !important;
   filter: none !important;
   -webkit-filter: none !important;
 }
@@ -104,8 +130,3 @@ body {
 .fight-stick .trigger-button::after {
   content: none !important;
 }
-
-
-/* ==========================================
-   CIRCEAN STUDIOS - JOYSTICK RECOLOR
-   ========================================== */
