@@ -1,11 +1,13 @@
 
-/* Circean Studios - Fightstick Skin */
+/* CIRCEAN STUDIOS - FIGHTSTICK TEST */
 
+/* Keep the background transparent */
 body {
   background: transparent !important;
 }
 
-/* Temporary test: hide all controller elements */
+/* Make the default controller invisible */
 .controller {
-  opacity: 0.3 !important;
+  background: none !important;
+  opacity: 1 !important;
 }
