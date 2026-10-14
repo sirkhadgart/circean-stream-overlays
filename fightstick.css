@@ -51,6 +51,15 @@ body {
    3. JOYSTICK BASE
    ========================================== */
 
+/* Moving joystick knob */
+.fight-stick .fstick {
+  position: relative;
+  z-index: 1;
+  transform: scale(0.5) !important;
+  transform-origin: center center;
+  filter: grayscale(1) !important;
+  -webkit-filter: grayscale(1) !important;
+}
 
 
 
