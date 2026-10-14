@@ -10,6 +10,13 @@ body {
   opacity: 1 !important;
 }
 
+/* CIRCEAN STUDIOS - JOYSTICK SIZE */
+
+.fight-stick .fstick {
+  transform: scale(0.5) !important;
+  transform-origin: center center;
+}
+
 /* Action buttons */
 .fight-stick .button,
 .fight-stick .bumper,
