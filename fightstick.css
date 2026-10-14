@@ -131,10 +131,6 @@ body {
   transform: scale(0.5) !important;
   transform-origin: center center;
 
-/* TEST - Recolor joystick sprite */
-
-.fight-stick .fstick {
   filter: grayscale(1) !important;
   -webkit-filter: grayscale(1) !important;
 }
-
