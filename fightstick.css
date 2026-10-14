@@ -52,23 +52,6 @@ body {
 
 
 /* ==========================================
-   3. JOYSTICK
-   ========================================== */
-
-/*
-   Preserve GPV's original joystick sprite
-   and directional animation.
-
-   Only reduce its displayed size.
-*/
-
-.fight-stick .fstick {
-  transform: scale(0.5) !important;
-  transform-origin: center center;
-}
-
-
-/* ==========================================
    4. ACTION BUTTONS
    ========================================== */
 
