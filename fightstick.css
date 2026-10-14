@@ -118,77 +118,82 @@ body {
    CIRCEAN STUDIOS
    ========================================== */
 
-/* All three groups share the same origin */
+/* Position the three button groups
+   relative to the original controller */
+
 .fight-stick .abxy,
 .fight-stick .bumpers,
 .fight-stick .triggers {
   position: absolute !important;
-  left: 470px !important;
   top: 0 !important;
+  left: 0 !important;
   right: auto !important;
   bottom: auto !important;
-  width: 650px !important;
+  width: 1122px !important;
   height: 534px !important;
 }
 
-/* Reset default positioning */
-.fight-stick .button,
-.fight-stick .bumper,
-.fight-stick .trigger-button {
+/* Reset button positioning */
+
+.fight-stick .abxy .button,
+.fight-stick .bumpers .bumper,
+.fight-stick .triggers .trigger-button {
   position: absolute !important;
   float: none !important;
   right: auto !important;
   bottom: auto !important;
+  margin: 0 !important;
 }
 
 /* TOP ROW */
 
-/* Column 1 - X */
-.fight-stick .button.x {
-  left: 0 !important;
-  top: 110px !important;
+/* X */
+.fight-stick .abxy .button.x {
+  left: 470px !important;
+  top: 120px !important;
 }
 
-/* Column 2 - Y */
-.fight-stick .button.y {
-  left: 160px !important;
-  top: 110px !important;
+/* Y */
+.fight-stick .abxy .button.y {
+  left: 610px !important;
+  top: 120px !important;
 }
 
-/* Column 3 - Right Bumper */
-.fight-stick .bumper.right {
-  left: 320px !important;
-  top: 110px !important;
+/* RB */
+.fight-stick .bumpers .bumper.right {
+  left: 750px !important;
+  top: 120px !important;
 }
 
-/* Column 4 - Left Bumper */
-.fight-stick .bumper.left {
-  left: 480px !important;
-  top: 110px !important;
+/* LB */
+.fight-stick .bumpers .bumper.left {
+  left: 890px !important;
+  top: 120px !important;
 }
 
 /* BOTTOM ROW */
 
-/* Column 1 - A */
-.fight-stick .button.a {
-  left: 0 !important;
-  top: 278px !important;
+/* A */
+.fight-stick .abxy .button.a {
+  left: 470px !important;
+  top: 270px !important;
 }
 
-/* Column 2 - B */
-.fight-stick .button.b {
-  left: 160px !important;
-  top: 278px !important;
+/* B */
+.fight-stick .abxy .button.b {
+  left: 610px !important;
+  top: 270px !important;
 }
 
-/* Column 3 - Right Trigger */
-.fight-stick .trigger-button.right {
-  left: 320px !important;
-  top: 278px !important;
+/* RT */
+.fight-stick .triggers .trigger-button.right {
+  left: 750px !important;
+  top: 270px !important;
 }
 
-/* Column 4 - Left Trigger */
-.fight-stick .trigger-button.left {
-  left: 480px !important;
-  top: 278px !important;
+/* LT */
+.fight-stick .triggers .trigger-button.left {
+  left: 890px !important;
+  top: 270px !important;
 }
+
