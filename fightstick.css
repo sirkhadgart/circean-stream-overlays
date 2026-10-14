@@ -55,8 +55,7 @@ body {
 .fight-stick .fstick {
   position: relative;
   z-index: 1;
- 
-  transform-origin: center center;
+
   filter: grayscale(1) !important;
   -webkit-filter: grayscale(1) !important;
 }
