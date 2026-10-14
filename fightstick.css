@@ -1,13 +1,28 @@
 
-/* CIRCEAN STUDIOS - FIGHTSTICK TEST */
+/* CIRCEAN STUDIOS - COLOR TEST */
 
-/* Keep the background transparent */
 body {
   background: transparent !important;
 }
 
-/* Make the default controller invisible */
 .controller {
   background: none !important;
+  opacity: 1 !important;
+}
+
+/* Test the joystick */
+.fight-stick .fstick {
+  background: #CF2664 !important;
+  border: 8px solid #6E5393 !important;
+  border-radius: 50% !important;
+}
+
+/* Test all eight action buttons */
+.fight-stick .button,
+.fight-stick .bumper,
+.fight-stick .trigger-button {
+  background: #779F5C !important;
+  border: 5px solid #CF2664 !important;
+  border-radius: 50% !important;
   opacity: 1 !important;
 }
