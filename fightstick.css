@@ -36,3 +36,45 @@ body {
   border: 5px solid #6E5393 !important;
   border-radius: 50% !important;
 }
+
+/* CIRCEAN STUDIOS - JOYSTICK MOVEMENT */
+
+.fight-stick .fstick {
+  transition: transform 0.06s ease-out;
+  background-image: none !important;
+  transform: translate(0, 0);
+}
+
+/* Cardinal directions */
+.fight-stick .fstick.up {
+  transform: translateY(-15px);
+}
+
+.fight-stick .fstick.down {
+  transform: translateY(15px);
+}
+
+.fight-stick .fstick.left {
+  transform: translateX(-15px);
+}
+
+.fight-stick .fstick.right {
+  transform: translateX(15px);
+}
+
+/* Diagonal directions */
+.fight-stick .fstick.up.left {
+  transform: translate(-11px, -11px);
+}
+
+.fight-stick .fstick.up.right {
+  transform: translate(11px, -11px);
+}
+
+.fight-stick .fstick.down.left {
+  transform: translate(-11px, 11px);
+}
+
+.fight-stick .fstick.down.right {
+  transform: translate(11px, 11px);
+}
