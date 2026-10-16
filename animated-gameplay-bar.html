@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Circean Studios Gameplay Gradient</title>
+
+<style>
+  :root {
+    --purple: #6E5393;
+    --pink: #CF2664;
+    --green: #779F5C;
+    --animation-speed: 12s;
+  }
+
+  html, body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    background: transparent;
+    overflow: hidden;
+  }
+
+
+/* GAMEPLAY FOOTER GRADIENT */
+.bar {
+  position: absolute;
+  left: 0;
+  top: 1006px;
+  width: 1920px;
+  height: 3px;
+  overflow: hidden;
+}
+
+
+  .bar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 100%;
+
+    background: linear-gradient(
+      90deg,
+      var(--purple) 0%,
+      var(--pink) 16.6667%,
+      var(--green) 33.3333%,
+      var(--purple) 50%,
+      var(--pink) 66.6667%,
+      var(--green) 83.3333%,
+      var(--purple) 100%
+    );
+
+    animation: gradientFlow
+      var(--animation-speed)
+      linear
+      infinite;
+  }
+
+  /* LEFT TO RIGHT MOVEMENT */
+  @keyframes gradientFlow {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="bar"></div>
+</body>
+</html>
