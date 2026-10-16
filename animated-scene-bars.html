@@ -2,57 +2,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<style>
-  html, body {
-    margin: 0;
-    width: 1920px;
-    height: 1080px;
-    background: transparent;
-    overflow: hidden;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  .bar {
-    position: absolute;
-    left: 115px;
-    width: 1690px;
-    height: 4px;
-    overflow: hidden;
-    border-radius: 4px;
-  }
+  <title>Circean Studios - Animated Gradient Bars</title>
 
-  .bar::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      90deg,
-      #6E5393 0%,
-      #CF2664 25%,
-      #779F5C 50%,
-      #6E5393 75%,
-      #CF2664 100%
-    );
-    background-size: 200% 100%;
-    animation: flow 12s linear infinite;
-  }
+  <style>
+    /* ==========================================
+       CIRCEAN STUDIOS
+       ANIMATED GRADIENT BARS
+       ========================================== */
 
-  .top {
-    top: 210px;
-  }
+    :root {
+      --purple: #6E5393;
+      --pink: #CF2664;
+      --green: #779F5C;
 
-  .bottom {
-    top: 850px;
-  }
+      --animation-speed: 12s;
+      --bar-height: 4px;
+    }
 
-  @keyframes flow {
-    from { background-position: 0% 0; }
-    to { background-position: -200% 0; }
-  }
-</style>
+    /* ==========================================
+       1. TRANSPARENT CANVAS
+       ========================================== */
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1920px;
+      height: 1080px;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    /* ==========================================
+       2. GRADIENT BAR CONTAINERS
+       ========================================== */
+
+    .bar {
+      position: absolute;
+
+      left: 115px;
+      width: 1690px;
+      height: var(--bar-height);
+
+      overflow: hidden;
+      border-radius: 999px;
+    }
+
+    /* ==========================================
+       3. SEAMLESS GRADIENT ANIMATION
+       ========================================== */
+
+    .bar::before {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 200%;
+      height: 100%;
+
+      /*
+         The gradient contains two identical
+         color sequences.
+
+         Translating by 50% of its own width
+         moves exactly one sequence, allowing
+         the animation to repeat seamlessly.
+      */
+
+      background: linear-gradient(
+        90deg,
+
+        var(--purple) 0%,
+        var(--pink) 12.5%,
+        var(--green) 25%,
+        var(--purple) 50%,
+
+        var(--pink) 62.5%,
+        var(--green) 75%,
+        var(--purple) 100%
+      );
+
+      animation: gradientFlow
+        var(--animation-speed)
+        linear
+        infinite;
+
+      will-change: transform;
+    }
+
+    @keyframes gradientFlow {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ==========================================
+       4. BAR POSITIONS
+       ========================================== */
+
+    .top {
+      top: 210px;
+    }
+
+    .bottom {
+      top: 850px;
+    }
+
+    /* ==========================================
+       5. OPTIONAL ACCESSIBILITY
+       ========================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      .bar::before {
+        animation: none;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
+
+  <!-- Top gradient -->
   <div class="bar top"></div>
+
+  <!-- Bottom gradient -->
   <div class="bar bottom"></div>
+
 </body>
 </html>
